@@ -1,0 +1,9 @@
+Income = [5000, 6000, 5500, 7000, 8000, 7500, 9000, 9500, 8500, 10000] Expenses = [2000, 2500, 2200, 2800, 3000, 2700, 3200, 3500, 3300, 3800] Profit = [3000, 3500, 3300, 4200, 5000, 4800, 5800, 6000, 5200, 6200]
+
+Finance_Data = {"Income": Income, "Expenses": Expenses, "Profit": Profit} Finance_DF = pd.DataFrame(data=Finance_Data)
+
+Finance_DF.plot(x="Expenses", y="Income", kind="scatter") plt.show()
+
+correlation_finance = Finance_DF.corr() print(correlation_finance)
+
+#Two lines to make our compiler able to draw: plt.savefig(sys.stdout.buffer) sys.stdout.flush()
