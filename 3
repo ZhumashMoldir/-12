@@ -1,0 +1,17 @@
+std_math = np.std(grades_df['Математика'])
+
+print("Стандартное отклонение для Математики:", std_math)
+
+import pandas as pd import numpy as np
+
+univer_data = pd.read_csv("data.csv", header=0, sep=",")
+
+var = np.var(univer_data)
+
+print(var)
+
+import sys import matplotlib matplotlib.use('Agg')
+
+import pandas as pd import matplotlib.pyplot as plt
+
+health_data = pd.read_csv("data.csv", header=0, sep=",") health_data.plot(x='Height', y='Weight', kind='scatter')
