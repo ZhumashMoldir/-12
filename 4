@@ -1,0 +1,13 @@
+plt.show() plt.savefig(sys.stdout.buffer) sys.stdout.flush()
+
+import pandas as pd
+
+full_univer_data = pd.read_csv("data.csv", header=0, sep=",")
+
+Corr_Matrix = round(full_univer_data.corr(),2)
+
+print(Corr_Matrix)
+
+#Three lines to make our compiler able to draw: import sys import matplotlib matplotlib.use('Agg')
+
+import pandas as pd import matplotlib.pyplot as plt
